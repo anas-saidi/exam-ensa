@@ -1,4 +1,4 @@
-package com.ensa.school;
+package com.ensa.course;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,11 +11,10 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class School {
+public class Course {
 
     @Id
     @GeneratedValue
     private Integer id;
-    private String name;
-    private String email;
+    private String title;
 }

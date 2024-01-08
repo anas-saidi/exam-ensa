@@ -1,4 +1,4 @@
-package com.ensa.school;
+package com.ensa.course;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -8,29 +8,29 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/schools")
+@RequestMapping("/api/v1/courses")
 @RequiredArgsConstructor
-public class SchoolController {
+public class CourseController {
 
-    private final SchoolService service;
+    private final CourseService service;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void save(
-            @RequestBody School school
+            @RequestBody Course course
     ) {
-        service.saveSchool(school);
+        service.saveCourse(course);
     }
 
     @GetMapping
-    public ResponseEntity<List<School>> findAllSchools() {
-        return ResponseEntity.ok(service.findAllSchools());
+    public ResponseEntity<List<Course>> findAllSchools() {
+        return ResponseEntity.ok(service.findAllCourse());
     }
 
     @GetMapping("/with-students/{school-id}")
-    public ResponseEntity<FullSchoolResponse> findAllSchools(
+    public ResponseEntity<FullCourseResponse> findAllSchools(
             @PathVariable("school-id") Integer schoolId
     ) {
-        return ResponseEntity.ok(service.findSchoolsWithStudents(schoolId));
+        return ResponseEntity.ok(service.findCoursesWithStudents(schoolId));
     }
 }

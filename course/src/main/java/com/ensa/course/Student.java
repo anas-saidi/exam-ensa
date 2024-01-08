@@ -1,4 +1,4 @@
-package com.ensa.school;
+package com.ensa.course;
 
 import lombok.*;
 

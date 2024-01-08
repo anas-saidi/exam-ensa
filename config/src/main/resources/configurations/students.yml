@@ -7,22 +7,20 @@ eureka:
 
 
 server:
-  port: 8070
+  port: 8090
 spring:
   application:
-    name: schools
+    name: students
   datasource:
-    url: jdbc:mysql://localhost:3306/schools_db
+    url: jdbc:mysql://localhost:3306/students_db
     username: root
     password:
   jpa:
     hibernate:
       ddl-auto: create-drop
-
 application:
   config:
-    students-url: http://localhost:8222/api/v1/students
-
+    courses-url: http://localhost:8222/api/v1/courses
 management:
   tracing:
     sampling:

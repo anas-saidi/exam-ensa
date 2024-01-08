@@ -1,4 +1,4 @@
-package com.ensa.school;
+package com.ensa.course;
 
 import lombok.*;
 
@@ -9,9 +9,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class FullSchoolResponse {
+public class FullCourseResponse {
 
-    private String name;
-    private String email;
+    private String title;
     List<Student> students;
 }

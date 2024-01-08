@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -19,5 +21,5 @@ public class Student {
     private String firstname;
     private String lastname;
     private String email;
-    private Integer schoolId;
+    private Integer courseId;
 }
